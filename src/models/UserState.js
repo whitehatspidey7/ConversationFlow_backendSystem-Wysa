@@ -4,7 +4,7 @@ const UserStateSchema = new Schema(
     {
         userId:{
             type: String,
-            required: String,
+            required: true,
             unique: true
         },
 
@@ -18,7 +18,19 @@ const UserStateSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: "Question",
             required: true
-        }
+        },
+
+        checkpointHistoryId: {
+        type: Schema.Types.ObjectId,
+        ref: "ConversationHistory",
+        default: null
+        },
+
+        checkpointQuestionId: {
+        type: Schema.Types.ObjectId,
+        ref: "Question",
+        default: null
+        },
 
     },
     {

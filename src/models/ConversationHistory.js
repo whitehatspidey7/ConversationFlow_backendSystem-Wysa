@@ -22,8 +22,13 @@ const HistorySchema = new Schema({
     selectedOptionId: {
         type: Schema.Types.ObjectId,
         ref: "Option",
-        required: true
-    }
+        required: false
+    },
+
+    isCheckpointBoundary: {
+    type: Boolean,
+    default: false
+    }   
 
 },{timestamps: true}); 
 

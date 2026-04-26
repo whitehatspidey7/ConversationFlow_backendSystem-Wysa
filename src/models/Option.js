@@ -29,7 +29,7 @@ const OptionSchema = new Schema({
 
 // middleware to ensure either we go to next question or next module.
 
-OptionSchema.pre("save", (next)=>
+OptionSchema.pre("save", function(next)
 {
     if(this.nextQuestionId && this.nextModuleId)
     {
