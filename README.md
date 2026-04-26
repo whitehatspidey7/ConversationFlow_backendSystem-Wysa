@@ -43,7 +43,7 @@ For development (uses nodemon):
 npm run dev
 The server will start on http://localhost:3000.
 
-### API Endpoints
+### API Endpoints (Either curl to the specific endpoint or you might have to use POSTMAN to send the post requests to the server)
 ## 1. Start a Module
 Starts a conversation flow for a user at the beginning of a specific module.
 
